@@ -1,0 +1,4 @@
+def potTR(n,b, acc):    
+    if (b==1): 
+        return acc
+    return  potTR(n, b-1, n * acc)

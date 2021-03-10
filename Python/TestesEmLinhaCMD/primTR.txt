@@ -1,0 +1,5 @@
+def primTR(n,i=2):    
+    # verifica o caso base:    
+    if (casoBase(n,i)!=None):
+        return casoBase(n,i)
+    return primTR(n, i+1)

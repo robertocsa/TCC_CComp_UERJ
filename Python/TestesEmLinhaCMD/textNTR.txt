@@ -1,0 +1,4 @@
+def textNTR(n):
+    if (n==0):
+        return ""
+    return textNTR(n - 1) + str(n) + ". The quick brown fox jumps over the lazy dog.\n"

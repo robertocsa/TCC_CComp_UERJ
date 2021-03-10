@@ -1,0 +1,4 @@
+def textIT(n, acc=""):
+    while not  (n==0):
+        n,acc = n - 1,str(n) + ". The quick brown fox jumps over the lazy dog.\n" + acc
+    return acc

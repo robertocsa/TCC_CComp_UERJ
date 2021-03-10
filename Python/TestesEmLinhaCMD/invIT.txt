@@ -1,0 +1,5 @@
+def invIT(texto, acc=""):
+    while not  (len(texto)<=0):
+        n=len(texto)-1
+        texto,acc = texto[0:n], acc+texto[n]
+    return acc

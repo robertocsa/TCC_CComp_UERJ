@@ -1,0 +1,8 @@
+Os arquivos nesta pasta são exemplos de funcoes recursivas a serem utilizados em testes
+de verificação do funcionamento do Lexer e do Parser gerados automaticamente pelo ANTLR4,
+ou seja, para verificar se essas funcoes estao sendo reconhecidas.
+Para realizar estes testes, navegue até a pasta \RecPy\src e siga os procedimentos 
+descritos no arquivo "Leiame-procedimentos de compilacao-Lexer Parser.txt".
+Dois tipos de resultados serao obtidos:
+a) a lista de tokens gerados; e
+b) a árvore de análise sintática (AST).

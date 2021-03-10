@@ -1,0 +1,4 @@
+def textTR(n, acc=""):
+    if (n==0):
+        return acc
+    return textTR(n - 1, str(n) + ". The quick brown fox jumps over the lazy dog.\n" + acc)

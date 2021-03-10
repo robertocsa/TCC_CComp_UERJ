@@ -1,0 +1,7 @@
+def invNTR(texto):
+    if (len(texto)<=0):
+        return ""
+    else:
+        n=len(texto)-1
+        return texto[n]+invNTR(texto[0:n])
+

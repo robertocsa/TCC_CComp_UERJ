@@ -1,0 +1,4 @@
+def palIT(texto):
+    while not  (casoBase(texto)!= None):
+        texto = texto[1:len(texto)-1]
+    return casoBase(texto)

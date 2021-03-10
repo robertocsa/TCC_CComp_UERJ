@@ -1,0 +1,7 @@
+def invTR(texto, acc=""):
+    n=len(texto)-1
+    if (len(texto)<=0):
+        return acc    
+    return invTR(texto[0:n], acc+texto[n])
+
+

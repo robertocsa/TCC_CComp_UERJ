@@ -1,0 +1,6 @@
+def fatmodTR(n, k, acc=1):
+   #retorna n! mod (k+1)
+   if n == 0:
+       return acc
+   return fatmodTR(n-1,k,n*acc% (k+1))
+

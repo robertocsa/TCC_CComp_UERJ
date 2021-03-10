@@ -1,0 +1,5 @@
+def fatmodIT(n, k, acc=1):
+    #retorna n! mod (k+1)
+    while not  n == 0:
+        n,k,acc = n-1,k, n *  acc % (k+1)
+    return acc

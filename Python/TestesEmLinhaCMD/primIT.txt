@@ -1,0 +1,5 @@
+def primIT(n,i=2):  
+    # verifica o caso base:    
+    while not  (casoBase(n,i)!=None):
+        n,i = n, i+1
+    return casoBase(n,i)

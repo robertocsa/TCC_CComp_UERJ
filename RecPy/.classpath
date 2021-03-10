@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="lexrParsr/OLD/|lexrParsr/RecPyLexer.g4|lexrParsr/RecPyParser.g4|lexrParsr/TestProgs/|lexrParsr/TestProgs/OLDs/" kind="src" path="src">
+		<attributes>
+			<attribute name="ignore_optional_problems" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/antlr-4.9.1-complete.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

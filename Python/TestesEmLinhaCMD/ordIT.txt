@@ -1,0 +1,4 @@
+def ordIT(L, acc=[]):
+    while not  (L==[]):
+        L,acc = subtracao (L, menor(L)), menor(L) + acc
+    return acc

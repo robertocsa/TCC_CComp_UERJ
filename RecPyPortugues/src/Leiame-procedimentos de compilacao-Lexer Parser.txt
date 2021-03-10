@@ -1,0 +1,78 @@
+Primeiramente, é preciso ter o Java instalado.
+
+Depois, é preciso configurar o caminho da biblioteca do Antlr, conforme instruções contidas em https://www.antlr.org/
+Para Windows:
+1.Download https://www.antlr.org/download/antlr-4.9.1-complete.jar.
+2. Add antlr-4.9.1-complete.jar to CLASSPATH, either:
+    1. Permanently: Using System Properties dialog > Environment variables > Create or append to CLASSPATH variable
+    2. Temporarily, at command line: SET CLASSPATH=.;C:\Javalib\antlr-4.9.1-complete.jar;%CLASSPATH%
+3. Create batch commands for ANTLR Tool, TestRig in dir in PATH
+ antlr4.bat: java org.antlr.v4.Tool %*
+ grun.bat:   java org.antlr.v4.gui.TestRig %*
+
+*******************
+Comando para gerar os arquivos .java e os arquivos .class, a partir dos arquivos RecPyLexer.g4 e RecPyParser.g4,
+da pasta src\lexrParsr:
+
+-> Abrir a pasta RecPy/src (esta) e depois abrir o cmd do Windows e digitar:
+
+compilaLexParser.bat
+
+Basta isso para criar todos os arquivos da pasta lexrParsr, a partir de apenas dois arquivos fontes:
+RecPyLexer.g4 e RecPyParser.g4
+
+*************************************************************************************************
+Explicações sobre os comandos internos de compilaLexParser.bat:
+O arquivo em lote acima especificado utilizará chamadas ao arquivo batch antlr.bat já preparado conforme 
+instruções do livro The Definitive ANTLR4 Reference.
+----
+O comando antlr RecPyLexer.g4 criará os arquivos:
+RecPyLexer.interp
+RecPyLexer.java
+RecPyLexer.tokens
+
+O comando antlr RecPyParser.g4 -visitor criará os demais arquivos da pasta lexrParsr:
+RecPyParser*.java, RecPyParser.interp e RecPyParser.tokens
+
+O comando javac *.java criará os arquivos de classes (*.class).
+*****************************************************************************************************
+
+Os arquivos *.java e *.class são também utilizados na IDE em uso para rodar a interface gráfica, ou seja,
+o aplicativo RecPy propriamente dito. Usamos a IDE Eclipse Eclipse IDE for Java Developers 
+Version: 2020-06 (4.16.0) Build id: 20200615-1200)).
+
+*****************************************************************************************************
+O arquivo em lote compilaLexParser.bat também pode ser usado para duas outras finalidades:
+1) Para visualizar os tokens gerados em determinada função recursiva, digitar o comando:
+->compilaLexParser.bat <nome do arquivo>
+
+Exemplo: compilaLexParser.bat fatIT.pyw
+
+2) Para visualizar a árvore de análise sintática (AST) gerada para determinada função recursiva, basta acrescentar o
+parâmetro -G:
+->compilaLexParser.bat <nome do arquivo> -G
+
+Exemplo: compilaLexParser.bat fatIT.pyw -G
+
+*********************************************
+Mas, antes de chamar estes comandos acima referidos, é preciso verificar se a variável tipoTraduc está configurada corretamente para o tipo de experimento que se fará, ou seja, se for testar uma função Iterativa, por exemplo, a linha 28 (tanto do 
+arquivo RecPyLexer.g4 quanto do RecPyParser.g4) deve ficar assim:
+
+........
+public enum TipoTrad {
+		TAIL_RECURSIVE,           <<----- Estes são
+		NON_TAIL_RECURSIVE,       <<----- os tipos de tradução
+		ITERATIVE                 <<----- possíveis
+	}
+	// Antes de realizar testes na linha de comando (CMD), configurar a linha abaixo conforme o tipo de algoritmo a testar:
+	// Fazer isso tanto no LEXER quanto no PARSER
+	private TipoTrad tipoTraduc=TipoTrad.ITERATIVE;        <<<-------- Esta é a linha 28 (exemplo para função iterativa)
+.......
+    Assim, em outro exemplo, caso o tipo de função a ser traduzido fosse recursiva caudal, a linha 28 ficaria assim:
+	private TipoTrad tipoTraduc=TipoTrad.TAIL_RECURSIVE; 
+	E, num terceiro exemplo, se fosse do tipo recursivo não caudal:
+	private TipoTrad tipoTraduc=TipoTrad.NON_TAIL_RECURSIVE; 
+
+Na execução do RecPy, essa mudança é feita automaticamente. Só é preciso esse ajuste para testes em linha de comando do Windows (na janela CMD).
+
+

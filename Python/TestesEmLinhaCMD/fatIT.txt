@@ -1,0 +1,4 @@
+def fatIT(n, acc=1):
+     while not  n < 2:
+         n,acc = n - 1, n * acc
+     return acc

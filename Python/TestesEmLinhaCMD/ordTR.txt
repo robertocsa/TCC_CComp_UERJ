@@ -1,0 +1,4 @@
+def ordTR(L, acc=[]):
+    if (L==[]):
+        return acc
+    return  ordTR(subtracao (L, menor(L)), menor(L) + acc)

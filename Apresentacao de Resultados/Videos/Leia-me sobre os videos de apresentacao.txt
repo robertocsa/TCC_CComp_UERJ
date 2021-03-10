@@ -1,0 +1,9 @@
+Nota sobre os vídeos de apresentação:
+
+Em razão de seu tamanho, não foi possível fazer upload para o Github. Assim,
+estão apresentados apenas no repositório do GitLab https://gitlab.com/Roberto_C_Santos_RJ/TCC_CComp_UERJ/
+
+ou no Youtube:
+https://youtu.be/D_fMF0I5OeM
+e
+https://youtu.be/NhMietucQFI

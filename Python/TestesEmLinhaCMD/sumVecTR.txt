@@ -1,0 +1,4 @@
+def sumVecTR(A, n, acc=0):
+    if n==1:
+        return acc
+    return sumVecTR(A, n-1, A[n]+ acc)

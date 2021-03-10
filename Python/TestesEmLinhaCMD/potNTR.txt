@@ -1,0 +1,5 @@
+def potNTR(n,b):    
+    if (b==1): 
+        return n
+    return n * potNTR(n, b-1)
+

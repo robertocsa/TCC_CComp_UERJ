@@ -1,0 +1,5 @@
+ def sumVecNTR(A, n):
+    if n==1:
+        return 0
+    else:
+        return A[n]+sumVecNTR(A, n-1)

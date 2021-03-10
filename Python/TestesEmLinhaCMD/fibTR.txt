@@ -1,0 +1,5 @@
+def fibTR(a, b, c):   
+    if (a == 0):
+        return c
+    return fibTR(a-1, b+c, b)
+

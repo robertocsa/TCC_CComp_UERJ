@@ -1,0 +1,4 @@
+def palTR(texto):
+    if (casoBase(texto)!= None):
+        return casoBase(texto)
+    return palTR(texto[1:len(texto)-1])

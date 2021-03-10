@@ -1,0 +1,5 @@
+def ordNTR(L):
+    if (L==[]):
+        return []
+    return menor(L) + ordNTR(subtracao (L, menor(L)))
+

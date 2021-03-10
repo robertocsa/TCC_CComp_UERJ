@@ -1,0 +1,5 @@
+def fatTR(n, acc=1):    
+     if n < 2:        
+         return acc
+     return  fatTR(n - 1, n * acc)
+

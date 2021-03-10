@@ -1,0 +1,4 @@
+def potIT(n,b, acc):   
+    while not  (b==1): 
+        n,b,acc = n, b-1, n * acc
+    return acc
