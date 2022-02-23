@@ -11,5 +11,3 @@ Orientador: Prof. Fabiano de Souza Oliveira<p>
 <img width="1149" alt="antlr4_parse_tree - defNonTailRecursive2" src="https://user-images.githubusercontent.com/3252597/155410827-02aefe0d-c2dd-44d0-b77a-edf05eca3cdb.png">
 <img width="1090" alt="antlr4_parse_tree - defTailRecursive" src="https://user-images.githubusercontent.com/3252597/155410830-594f8b26-be67-4d54-859a-dbe5ec2952f9.png">
 <img width="854" alt="Exemplo de arvore AST gerada" src="https://user-images.githubusercontent.com/3252597/155410836-07ce18f4-7a10-40ad-8a36-a4f453509ea1.png">
-<img width="696" alt="Exemplo de Excecao na linha de comando" src="https://user-images.githubusercontent.com/3252597/155410837-b934a0a5-173c-4ef3-ac28-ca521e2e358c.png">
-
